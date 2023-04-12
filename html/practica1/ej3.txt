@@ -1,0 +1,289 @@
+En cada caso, explicar las diferencias entre los segmentos de código y sus visualizaciones:
+3.a)
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+<a href="#">Click aquí para ir a Google</a>
+<a href="#arriba">Click aquí para volver arriba</a>
+<a name="arriba" id="arriba"></a>
+
+La primera es un ancla que al hacerle click sobre "Click aquí para ir a Google" nos abrira la pagina http://www.google.com.ar en la ventana acutal
+La segunda ancla difiere en con la primera en que se abrira la pagina en una nueva ventana
+En la tercer ancla falta la etiqueta de cierre </a> y no tiene contenido, por lo tanto no mostrara nada, aunque con type se nos esta aclarando el tipo del archivo al que se está enlazando con hreflang, el idioma del documento al que se está enlazando, con el atributo charset se especifica la codificación de caracteres utilizada en la página a la que se enlaza y con el atributo rel especifica la relación entre la página actual y la página a la que se enlaza.
+La tercer ancla se utiliza el símbolo "#" que sirve como un marcador de posición para indicar que el enlace debe apuntar a la misma página, pero no a un elemento específico en ella. En otras palabras, creamos un enlace que no lleva a ninguna otra página o recurso, sino que simplemente actualiza la página actual
+La penultima y ultima ancla estan enlazadas, si hacemos click en "Click aquí para volver arriba" nos movera hacia donde hayamos puesto el ancla con nombre "arriba" en el documento.
+
+3.b)
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
+
+En la primer sentencia se añida un parrafo con una imagen y a continuacion un hypervinculo con un texto de Click aquí que nos redirecciona a http://www.google.com.ar
+En el segundo caso se nos redireccionara a la pagina si hacemos click sobre la imagen
+En el tercer caso si hacemos click tanto en la imagen como en el texto se nos redireccionara al link
+El ultimo es similar al anterior ya que enlaces muestran la misma imagen y están vinculados al mismo sitio web, pero el código HTML se ha escrito de manera diferente, lo que parece indicar una mala practica o una forma mas extensa de aplicar lo mismo
+
+3.c)
+<ul> 
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ul>
+
+<ol>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ol>
+
+<ol>
+<li>xxx</li>
+</ol>
+<ol>
+<li value="2">yyy</li>
+</ol>
+<ol>
+<li
+value="3">zzz</li>
+</ol>
+
+<blockquote>
+<p>1. xxx<br />
+2. yyy<br />
+3. zzz</p>
+</blockquote
+
+El primer caso muestra una lista desordenada de items
+El segundo es una lista ordenada de items (enumerada del 1 al 3)
+El tercero refleja una mala practica, se hacen 3 listas ordendas y con el atributo value se cambia el numero por el que comienza
+En el ultimo se simula el uso de una lista ordenada haciendo saltos de linea y escribiendo los numeros
+
+3.d)
+<table border="1" width="300">
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+
+<table border="1" width="300">
+<tr>
+<td><div align="center"><strong>Colum
+na1</strong></div></td>
+<td><div align="center"><strong>Columna 
+2</strong></div></td>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+
+En la segunda tabla se simula usar una cabecera de tabla con un div y demas atributos cuando ya se cuenta con una etiqueta <th> que lo hace
+
+3.e)
+<table width="200">
+<caption>
+Título
+</caption>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">
+&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr> 
+</table>
+
+<table width="200">
+<tr>
+<td colspan="3"><div 
+align="center">Título</div></td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+En la segunda tabla se evita el uso de la etiqueta <caption> para la creacion del titulo o leyenda de una tabla, a mi parecer una mala practica
+
+3.f)
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2"
+bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+Los atributos colspan y rowspan pueden ser usados para hacer que las celdas abarquen dos o más celdas en dirección horizontal o vertical, respectivamente. En la primera tabla la primer celda ocupa dos celdas en la direccion vertical (rowspan) y en la segunda tabla ocurre lo mismo pero en horizontal (colspan)
+
+3.g)
+<table width="200" border="1">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2"rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+
+<table width="200" border="1" cellpadding="0" 
+cellspacing="0">
+<tr>
+<td colspan="2"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+
+La principal diferencia que noto es que se eliminaron los espacios entre las celdas
+
+3.h)
+<form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+</fieldset>
+<input type="submit" id="boton1" name="boton1" value="Enviar" />
+</form>
+
+<form id="form2" name="form2" action="" method="get" target="_blank">
+LOGIN<br />
+<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+<input type="submit" id="boton2" name="boton2" value="Enviar" />
+</form>
+
+<form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu3" name="usu3" /><br />
+Clave: <input type="password" id="clave3" name="clave3" />
+</fieldset>
+<input type="reset" id="boton3" name="boton3" value=
+"Enviar" />
+</form>
+
+Las principales diferencias:
+
+EN EL PRIMER FORMULARIO:
+Se usa el metodo post que es el indicado para hacer un login ya que en el método POST, los parámetros se envían en el cuerpo de la solicitud, y no se ven en la URL.
+El URI procesar.php sera el responsable de la manipulación de los datos enviados por el formulario
+Tiene valores preestablecidos 
+EN EL SEGUNDO FORMULARIO:
+Se usa el metodo get que envía los datos en la URL de la solicitud. Mal empleado en este ejemplo ya que se trata de un LOGIN
+Los datos del formulario se envían al archivo especificado en la acción del formulario, que en este caso está en blanco (lo que significa que el formulario se enviará a la misma página que el formulario).
+EN EL TERCER FORMULARIO:
+El valor de la acción del formulario es un enlace de correo electrónico lo que significa que el formulario intentará enviar los datos del formulario directamente a la dirección de correo electrónico proporcionada
+
+3.i)
+<label>Botón 1
+<button type="button" name="boton1" id="boton1">
+<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+<b>CLICK AQUÍ</b></button></label>
+
+<label>Botón 2
+<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+</label>
+
+El primer botón se crea utilizando el elemento <button>. Este botón tiene un texto ("CLICK AQUÍ") y una imagen asociada que se muestra dentro del botón.
+
+El segundo botón se crea utilizando el elemento <input> con el atributo type="button". Este botón tiene un texto ("CLICK AQUÍ") y no tiene una imagen asociada. 
+
+3.j)
+<p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p>
+
+<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p>
+
+Ambos bloques de código crean botones de opción (radio buttons) para que el usuario seleccione una opción de una lista de opciones.
+
+La principal diferencia entre ambos bloques es que el primer bloque crea dos botones de opción con el mismo nombre "opcion". Eso significa que solo se puede seleccionar una de las dos opciones, ya que son mutuamente exclusivas. Al seleccionar una opción, se deselecciona automáticamente la otra.
+
+El segundo bloque de código crea dos grupos de botones de opción separados, cada uno con su propio nombre ("opcion1" y "opcion2"). Esto significa que el usuario puede seleccionar una opción de cada grupo, ya que son independientes y no están relacionados entre sí.
+
+3.k)
+<select name="lista">
+<optgroup label="Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label="Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+
+<select name="lista[]" multiple="multiple">
+<optgroup label=" Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label=" Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+
+La principal diferencia es que el segundo código incluye el atributo "multiple", lo que permite que el usuario seleccione múltiples opciones en la lista desplegable, mientras que en el primer código solo se puede seleccionar una opción. Además, el segundo código utiliza corchetes [] en el atributo "name" para indicar que se espera una matriz de valores en el lado del servidor, mientras que el primer código solo espera un valor.
+Tener en cuenta que cuando el atributo multiple está presente, la mayoría de los navegadores cambian automáticamente la forma del control a una caja con barras de desplazamiento
