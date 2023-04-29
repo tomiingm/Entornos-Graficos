@@ -1,0 +1,109 @@
+1. ¿ Qué es CSS y para qué se usa?
+
+CSS son las siglas de Cascade Style Sheet que traducido significa hojas de estilo en 
+cascada.
+Las hojas de estilo es una tecnología que nos permite controlar la apariencia de una 
+página web. En un principio, los sitios web se concentraban más en su contenido que 
+en su presentación.
+Con CSS podemos especificar estilos como el tamaño, fuentes, color, espaciado entre 
+textos y recuadros así como el lugar donde disponer texto e imágenes en la página.
+
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+
+En CSS, las reglas son el medio por el cual se especifican las declaraciones de estilo para aplicar a un elemento HTML en particular.
+Las reglas se componen de dos partes principales: el selector y el bloque de declaración.
+El selector especifica a qué elemento o elementos HTML se aplicarán las declaraciones de estilo. Puede ser un nombre de etiqueta,
+una clase, un identificador, un selector de atributo o un selector de pseudo-clase.
+El bloque de declaración se encuentra entre llaves y contiene una o más declaraciones de estilo separadas por punto y coma. 
+Cada declaración de estilo consiste en una propiedad y un valor separados por dos puntos. La propiedad especifica qué aspecto 
+del elemento se va a cambiar, mientras que el valor especifica el nuevo valor de esa propiedad.
+
+Las reglas CSS se aplican en cascada, lo que significa que las declaraciones de estilo en reglas posteriores pueden anular las declaraciones
+de estilo en reglas anteriores si se aplican al mismo elemento HTML. También es posible aplicar estilos 
+condicionales mediante el uso de reglas de media consulta y reglas de pseudo-elementos.
+
+3. ¿ Cuáles son las tres formas de dar estilo a un documento?
+
+Se pueden asociar las reglas de estilo a las marcas HTML de tres maneras:
+- directamente a la marca, 
+- en el head de la página 
+- o agrupar las reglas de estilo en un archivo independiente con extensión *.css
+
+4. ¿ Cuáles son los distintos tipos de selectores más utilizados? Ejemplifique cada uno.
+
+Hay varios tipos de selectores en CSS, cada uno de los cuales se utiliza para seleccionar elementos HTML de una manera específica. Algunos de los selectores más comunes incluyen:
+
+- Selector de tipo: selecciona todos los elementos de un tipo específico (por ejemplo, todas las etiquetas <p>)
+ej: 
+p {
+  color: blue;
+}
+
+- Selector de clase: selecciona todos los elementos que tienen un atributo de clase específico
+ej: 
+.navbar {
+  background-color: black;
+}
+
+- Selector de ID: selecciona un elemento específico que tiene un ID único
+ej: 
+#header {
+  font-size: 24px;
+}
+
+- Selector de descendencia: selecciona elementos que son descendientes de otro elemento
+ej: 
+ul li {
+  list-style: none;
+}
+
+- Selector de hijo: selecciona elementos que son hijos directos de otro elemento
+ej:
+nav > ul {
+  padding: 0;
+}
+
+- Selector de atributo: selecciona elementos que tienen un atributo específico
+ej: 
+input[type="submit"] {
+  background-color: green;
+}
+
+- Selector de pseudo-clase: selecciona elementos en función de su estado (por ejemplo, si se está activando o no)
+ej: 
+a:hover {
+  text-decoration: underline;
+}
+
+5. ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+
+En CSS, una pseudo-clase es una palabra clave que se utiliza para seleccionar y aplicar un estilo a un elemento HTML que se encuentra en un estado específico o en una situación específica.
+Las pseudo-clases se agregan al selector CSS para especificar un estado particular del elemento seleccionado.
+Las pseudo-clases más utilizadas en relación con los vínculos (o enlaces) son:
+
+- :hover: Se aplica cuando el cursor del mouse se coloca sobre el vínculo.
+- :active: Se aplica cuando el vínculo está siendo activamente presionado o seleccionado por el usuario.
+- :visited: Se aplica a un vínculo después de que el usuario ha visitado la página a la que el vínculo se dirige.
+- :focus: Se aplica cuando el elemento está enfocado (por ejemplo, mediante la navegación del teclado).
+
+6. ¿ Qué es la herencia?
+
+La herencia en CSS es un mecanismo mediante el cual los estilos aplicados a un elemento se propagan a sus elementos secundarios (hijos).
+En otras palabras, la herencia permite que las propiedades de estilo definidas en un elemento se apliquen a todos los elementos secundarios de ese elemento,
+a menos que se especifique lo contrario.
+Cuando se define una propiedad en un elemento, esa propiedad se convierte en el valor predeterminado para todas las instancias de esa propiedad dentro del elemento y su descendencia.
+Los estilos heredables incluyen propiedades como color, tamaño de fuente y familia de fuentes.
+
+7. ¿ En qué consiste el proceso denominado cascada?
+
+Es el proceso que determina qué estilo se aplicará a cada elemento en función de la prioridad de las reglas de estilo y de la especificidad del selector.
+Cuando se aplica un estilo a un elemento en una página web, CSS sigue un proceso de cascada para determinar qué estilo se aplicará finalmente. La cascada en CSS funciona de la siguiente manera:
+
+- Se recopilan todas las reglas de estilo definidas en el archivo CSS y se agrupan en una lista. Las reglas de estilo pueden provenir de diferentes fuentes, como archivos CSS externos, estilos incorporados en la página web o estilos en línea.
+- Se determina la especificidad de cada selector. La especificidad se basa en el número de selectores y el tipo de selectores utilizados en una regla. Cuanto más específico sea el selector, mayor será su prioridad.
+- Se determina la importancia de las reglas. Se puede asignar un nivel de importancia a las reglas mediante el uso de la palabra clave "important".
+- Se aplica la regla con la mayor especificidad y, si hay empate en la especificidad, se aplica la regla que aparece más abajo en la lista de estilos. Si hay empate en la especificidad y en la posición de la regla, se aplica la regla con mayor importancia.
+
+Si aún hay empate después de aplicar estas reglas, se aplicará el estilo por defecto del navegador.
+
+Este proceso de cascada asegura que los estilos se apliquen de manera consistente y predecible en todas las páginas web.
