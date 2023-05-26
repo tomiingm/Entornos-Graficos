@@ -1,0 +1,22 @@
+En cada caso, indicar las salidas correspondientes:
+
+<?php
+$fun = getdate();
+echo "Has entrado en esta pagina a las $fun[hours] horas, con $fun[minutes] minutos y $fun[seconds]
+segundos, del $fun[mday]/$fun[mon]/$fun[year]";
+?>
+
+Se utiliza la funcion getdate() para obtener la fecha y hora de el momento en el cual se solicita el acceso a la pagina.
+Dicha funcion devuelve un arreglo donde las posiciones utlizadas muestran el dia, mes, año, etc. segun se solicite.
+La salida en pantalla es un texto mostrando dicha informacion.
+
+<?php
+function sumar($sumando1,$sumando2){
+ $suma=$sumando1+$sumando2;
+ echo $sumando1."+".$sumando2."=".$suma;
+}
+sumar(5,6);
+?>
+
+Aqui se declara una funcion sumar() con parametros de entrada $sumando1 y $sumando2 (enteros) donde se suman ambos valores y se muestra el resultado junto con la operacion.
+Luego se llama a dicha funcion con $sumando1 = 5 y $sumando2 = 6.

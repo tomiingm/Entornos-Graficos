@@ -1,0 +1,43 @@
+En el siguiente código identificar:
+• las variables y su tipo
+• los operadores
+• las funciones y sus parámetros
+• las estructuras de control
+• cuál es la salida por pantalla
+
+<?php
+function doble($i) {
+ return $i*2;
+}
+$a = TRUE;
+$b = "xyz";
+$c = 'xyz';
+$d = 12;
+echo gettype($a);
+echo gettype($b);
+echo gettype($c);
+echo gettype($d);
+if (is_int($d)) {
+ $d += 4;
+}
+if (is_string($a)) {
+ echo "Cadena: $a";
+}
+$d = $a ? ++$d : $d*3;
+$f = doble($d++);
+$g = $f += 10;
+echo $a, $b, $c, $d, $f , $g;
+?> 
+
+Se identifican las variables $a (boolean), $b (string), $c (string), $d (int), $f (int) y $g (int).
+
+Los operadores presentes son operador de asignacion (=), operador de multiplicacion (*), operador de incremento (++),
+operador de comparacion igualdad (==), operador ternario (?:) y operador de concatenacion (.).
+
+Las funciones presentes son gettype($a), is_int($d) y doble($i).
+
+Se identifica la estructura de control if-else.
+
+La salida por pantalla es:
+
+booleanstringstringinteger1xyzxyz184444

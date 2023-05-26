@@ -1,0 +1,31 @@
+En cada caso, indicar las salidas correspondientes:
+
+<?php
+$matriz = array("x" => "bar", 12 => true);
+echo $matriz["x"];
+echo $matriz[12];
+?>
+
+La linea 5 va a mostrar "bar", luego la linea 6 va a mostrar "1" ya que el valor es en esa posicion es true.
+
+<?php
+$matriz = array("unamatriz" => array(6 => 5, 13 => 9, "a" => 42));
+echo $matriz["unamatriz"][6];
+echo $matriz["unamatriz"][13];
+echo $matriz["unamatriz"]["a"];
+?>
+
+Aqui hay un arreglo ("unamatriz") dentro de otro arreglo ($matriz).
+Por ejemplo, el arreglo $matriz en la posicion "unamatriz" en la posicion 6 va a ser 5.
+La salida va a ser en este caso 5942.
+
+<?php
+$matriz = array(5 => 1, 12 => 2);
+$matriz[] = 56;
+$matriz["x"] = 42;
+unset($matriz[5]);
+unset($matriz);
+?>
+
+Aqui la funcion unset() destruye primero a $matriz[5] (linea 26) y luego a $matriz (linea 27).
+No hay salida.

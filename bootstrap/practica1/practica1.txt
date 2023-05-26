@@ -1,0 +1,36 @@
+Práctica 1: introducción / instalar Bootstrap
+
+2) Crear un div de clase container, con una fila que contenga 1 columna.
+
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            columna
+          </div>
+        </div>
+    </div>  
+</body>
+
+3) Crear un archivo CSS que se llame estilo.css, y llamarlo desde el archivo donde estemos trabajando. Crear una clase que se llame contenedor, con un color de fondo cualquiera,
+y añadirle esa clase al div con clase container que creamos en el ejercicio anterior.
+
+En el archivo css:
+
+.contenedor {
+    background-color: lightblue;
+  }
+
+Se agrega <link href="css/estilos.css" rel="stylesheet" media="screen"> al <head>
+
+Luego, en el html:
+
+<body>
+    <div class="container contenedor">
+        <div class="row">
+          <div class="col">
+            columna
+          </div>
+        </div>
+    </div>  
+</body>

@@ -1,0 +1,93 @@
+Indicar si los siguientes códigos son equivalentes.
+
+<?php
+$i = 1;
+while ($i <= 10) {
+ print $i++;
+}
+?>
+
+<?php
+$i = 1;
+while ($i <= 10):
+ print $i;
+ $i++;
+endwhile;
+?>
+
+<?php
+$i = 0;
+do {
+ print ++$i;
+} while ($i<10);
+?>
+
+Los tres codigos son equivalentes y producen la misma salida; en todos los casos se muestra en pantalla los numeros naturales del 1 al 10.
+Se utilizan tres formas distintas de la estructura de control 'while'.
+
+<?php
+for ($i = 1; $i <= 10; $i++) {
+ print $i;
+}
+?>
+
+<?php
+for ($i = 1; $i <= 10; print $i, $i++) ;
+?>
+
+<?php
+for ($i = 1; ;$i++) {
+ if ($i > 10) {
+ break;
+ }
+ print $i;
+}
+?>
+
+<?php
+$i = 1;
+for (;;) {
+ if ($i > 10) {
+ break;
+ }
+ print $i;
+ $i++;
+}
+?>
+
+Estos 4 codigos tambien son equivalentes y tienen la misma salida que los anteriores.
+Se muestran distintas formas de trabajar con la estructura 'for', que tiene 3 parametros de entrada (contador inicial, condicion, incremento del contador).
+Tambien aparece la declaracion break, que sirve para salir de un bucle.\
+
+
+<?php
+…
+…
+if ($i == 0) {
+ print "i equals 0";
+} elseif ($i == 1) {
+ print "i equals 1";
+} elseif ($i == 2) {
+ print "i equals 2";
+}
+?>
+
+<?php
+…
+…
+switch ($i) {
+ case 0:
+ print "i equals 0";
+ break;
+ case 1:
+ print "i equals 1";
+ break;
+ case 2:
+ print "i equals 2";
+ break;
+}
+?>
+
+Una vez mas, los codigos son equivalentes. Se muestra en pantalla un texto mostrando el valor de $i.
+En este caso la diferencia es que en el primer codigo se utiliza la estructura 'if-else' para mostrar cada caso posible.
+En el segundo se utiliza la estructura 'switch' en el cual se determina para cada caso el codigo correspondiente.

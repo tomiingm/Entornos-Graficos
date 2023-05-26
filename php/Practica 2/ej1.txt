@@ -1,0 +1,24 @@
+Indicar si los siguientes códigos son equivalentes.
+
+<?php
+$a = array( 'color' => 'rojo',
+ 'sabor' => 'dulce',
+ 'forma' => 'redonda',
+ 'nombre' => 'manzana',
+ 4
+ );
+?>
+
+<?php
+$a['color'] = 'rojo';
+$a['sabor'] = 'dulce';
+$a['forma'] = 'redonda';
+$a['nombre'] = 'manzana';
+$a[] = 4;
+?> 
+
+Sí, los dos códigos son equivalentes. Ambos crean un array asociativo con las mismas claves y asignan los mismos valores a esas claves.
+La única diferencia es la forma en que se agrega el valor 4 al final del array.
+
+En el primer código, el valor 4 se agrega como un elemento independiente dentro del array, sin una clave asociada.
+En el segundo código, se utiliza la sintaxis $a[] para agregar el valor 4 al final del array sin especificar una clave.

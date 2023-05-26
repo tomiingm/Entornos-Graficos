@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Checklist Example</title>
+</head>
+
+<body>
+  <ul>
+    <li><input type="checkbox" name="item1" value="Item 1" onchange="handleCheckboxChange(event)"> Item 1</li>
+    <li><input type="checkbox" name="item2" value="Item 2" onchange="handleCheckboxChange(event)"> Item 2</li>
+    <li><input type="checkbox" name="item3" value="Item 3" onchange="handleCheckboxChange(event)"> Item 3</li>
+  </ul>
+
+  <script>
+    function handleCheckboxChange(event) {
+      var checkbox = event.target;
+      var isChecked = checkbox.checked;
+      var value = checkbox.value;
+      console.log("Checkbox value:", value);
+      console.log("Is checked:", isChecked);
+    }
+  </script>
+</body>
+
+</html>
