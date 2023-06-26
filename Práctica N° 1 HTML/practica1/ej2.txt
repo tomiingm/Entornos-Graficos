@@ -1,0 +1,62 @@
+2.a) <!-- Código controlado el dí</a>a 12/08/2009 →
+
+Esta etiqueta es un comentario.
+Puede estar en cualquier parte del documento HTML.
+Sólo es visible en el código fuente y sirve para aclarar cuestiones
+en el código.
+
+2.b) <div id="bloque1">Contenido del bloque1</div>
+
+La etiqueta <div> define una división.
+Esta etiqueta permite agrupar varios elementos de bloque.
+Puede estar en cualquier parte del documento HTML.
+
+2.c) <img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32"
+longdesc="detalles.htm" />
+
+La etiqueta vacía <img> permite mostrar imágenes vectoriales o de mapa de bits 
+en una página web.
+Las imágenes no forman parte del documento, sino que se mantienen como archivos aparte.
+
+
+2.d) <meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+
+Los elementos vacíos <meta> no tienen un propósito definido.
+Pueden contener cualquier tipo de información, pero el agente que recibe la página web debe ser 
+capaz de interpretar esa información.
+
+
+2.e) <a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
+rel="help">Resumen HTML </a>
+
+Los enlaces en HTML se crean mediante la etiqueta <a>.
+El atributo más importante de la etiqueta <a> es href, que se utiliza para indicar la URL
+a la que apunta el enlace.
+
+
+2.f) <table width="200" summary="Datos correspondientes al ejercicio vencido">
+<caption align="top"> Título </caption>
+<tr>
+<th scope="col">&nbsp;</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+<tr>
+<th scope="row">1º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">2º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+La etiqueta <table> encierra todas las filas y columnas de la tabla.
+Las etiquetas <tr> (del inglés "table row") definen cada fila de la tabla y encierran todas las columnas.
+Por último, la etiqueta <td> (del inglés "table data cell") define cada una de las columnas de las filas.
